@@ -70,7 +70,7 @@
         console.log("Age in months:", ageInMonths);
         console.log("Total hobbies:", totalHobbies);
 
-        document.getElementById("profileForm").addEventListener("submit", function(event) {
+        document.getElementById("profileForm").addEventListener("submit", (event) => {
             event.preventDefault();
 
             const nameInput = document.getElementById("username").value;
@@ -86,7 +86,7 @@
             console.log("Updated Profile:", userProfile);
         });
 
-        document.getElementById("addBtn").addEventListener("click", function() {
+        document.getElementById("addBtn").addEventListener("click", () => {
             const input = document.getElementById("itemInput");
             const itemText = input.value.trim();
 
@@ -98,7 +98,7 @@
             }
         });
 
-        document.getElementById("removeBtn").addEventListener("click", function() {
+        document.getElementById("removeBtn").addEventListener("click", () => {
             const list = document.getElementById("hobbyList");
             if (list.lastElementChild) {
                 list.lastElementChild.remove();
