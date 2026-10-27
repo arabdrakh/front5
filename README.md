@@ -26,7 +26,7 @@ Added a submit event listener to capture input values, update the userProfile ob
 Part 3: DOM List Manipulation
 
 Task 5. Creating & Removing Elements
-Created an unordered list representing hobbies. Added an input field with an "Add Item" button to create and append new li items, a "Remove Item" button to delete the last item from the list, and style toggling on item click.
+Created an unordered list representing hobbies. Added an input field with an "Add Item" button to create and append new li items, and a "Remove Item" button to delete the last item from the list.
 
 ![alt text](src/image-3.png)
 

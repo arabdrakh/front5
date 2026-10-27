@@ -29,7 +29,6 @@
 
         li {
             margin-bottom: 5px;
-            cursor: pointer;
         }
 
         #profileDisplay {
@@ -131,18 +130,6 @@
                 userProfile.hobbies.pop();
                 totalHobbies = userProfile.hobbies.length;
                 profileDisplay.textContent = "Name: " + userProfile.name + "  Age: " + age + " (" + ageInMonths + " months)  Hobbies: " + totalHobbies;
-            }
-        });
-
-        document.getElementById("hobbyList").addEventListener("click", function(event) {
-            if (event.target.tagName === "LI") {
-                if (event.target.style.textDecoration === "line-through") {
-                    event.target.style.textDecoration = "none";
-                    event.target.style.color = "black";
-                } else {
-                    event.target.style.textDecoration = "line-through";
-                    event.target.style.color = "gray";
-                }
             }
         });
     </script>
