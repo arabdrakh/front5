@@ -20,8 +20,8 @@ Created an HTML form with input fields for Username and Birth Year, and a "Creat
 Task 4. Event Listener
 
 Added a submit event listener to capture input values and update the userProfile object without reload.
+![alt text](image3.png)
 
-![alt text](src/image-3.png)
 
 ![alt text](src/image-4.png)
 
