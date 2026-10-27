@@ -90,7 +90,7 @@
 
             const nameInput = document.getElementById("username").value;
             const birthYearInput = document.getElementById("birthYear").value;
-
+        
             if (nameInput) {
                 userProfile.name = nameInput;
             }
@@ -101,8 +101,8 @@
             age = currentYear - userProfile.birthYear;
             ageInMonths = age * 12;
 
-            profileDisplay.textContent = "Name: " + userProfile.name + " | Age: " + age + " (" + ageInMonths + " months) | Hobbies: " + totalHobbies;
-            profileDisplay.style.color = "green";
+            profileDisplay.textContent = "Name: " + userProfile.name + "  Age: " + age + " (" + ageInMonths + " months)  Hobbies: " + totalHobbies;
+            profileDisplay.style.color = "hotpink";
 
             console.log("Updated Profile:", userProfile);
         });
