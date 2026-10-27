@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+</head>
+<body>
+
+    <h2>User Profile</h2>
+
+    <script>
+        const userProfile = {
+            name: "Aruzhan",
+            birthYear: 2006,
+            isDeveloper: true,
+            hobbies: ["Reading", "Painting", "Coding"]
+        };
+
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - userProfile.birthYear;
+        const ageInMonths = age * 12;
+        const totalHobbies = userProfile.hobbies.length;
+
+        console.log("Name:", userProfile.name);
+        console.log("Age:", age);
+        console.log("Age in months:", ageInMonths);
+        console.log("Total hobbies:", totalHobbies);
+    </script>
+
+</body>
+</html>
