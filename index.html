@@ -9,6 +9,12 @@
 
     <h2>User Profile</h2>
 
+    <form id="profileForm">
+        <input type="text" id="username" placeholder="Username">
+        <input type="number" id="birthYear" placeholder="Birth Year">
+        <button type="submit">Create / Update Profile</button>
+    </form>
+
     <script>
         const userProfile = {
             name: "Aruzhan",
@@ -26,6 +32,22 @@
         console.log("Age:", age);
         console.log("Age in months:", ageInMonths);
         console.log("Total hobbies:", totalHobbies);
+
+        document.getElementById("profileForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById("username").value;
+            const birthYearInput = document.getElementById("birthYear").value;
+
+            if (nameInput) {
+                userProfile.name = nameInput;
+            }
+            if (birthYearInput) {
+                userProfile.birthYear = Number(birthYearInput);
+            }
+
+            console.log("Updated Profile:", userProfile);
+        });
     </script>
 
 </body>
