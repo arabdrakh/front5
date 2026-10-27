@@ -28,20 +28,11 @@
         li {
             margin-bottom: 5px;
         }
-
-        #profileDisplay {
-            padding: 10px;
-            background-color: #f4f4f4;
-            border-radius: 4px;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
 
     <h2>User Profile</h2>
-
-    <p id="profileDisplay"></p>
 
     <form id="profileForm">
         <input type="text" id="username" placeholder="Username">
@@ -65,40 +56,32 @@
         const userProfile = {
             name: "Aruzhan",
             birthYear: 2008,
+            isDeveloper: true,
             hobbies: ["Reading", "Painting", "Gaming"]
         };
 
         const currentYear = new Date().getFullYear();
-        let age = currentYear - userProfile.birthYear;
-        let ageInMonths = age * 12;
-        let totalHobbies = userProfile.hobbies.length;
+        const age = currentYear - userProfile.birthYear;
+        const ageInMonths = age * 12;
+        const totalHobbies = userProfile.hobbies.length;
 
         console.log("Name:", userProfile.name);
         console.log("Age:", age);
         console.log("Age in months:", ageInMonths);
         console.log("Total hobbies:", totalHobbies);
 
-        const profileDisplay = document.getElementById("profileDisplay");
-        profileDisplay.textContent = "Name: " + userProfile.name + " Age: " + age + " (" + ageInMonths + " months) Hobbies: " + totalHobbies;
-
         document.getElementById("profileForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
             const nameInput = document.getElementById("username").value;
             const birthYearInput = document.getElementById("birthYear").value;
-        
+
             if (nameInput) {
                 userProfile.name = nameInput;
             }
             if (birthYearInput) {
                 userProfile.birthYear = Number(birthYearInput);
             }
-
-            age = currentYear - userProfile.birthYear;
-            ageInMonths = age * 12;
-
-            profileDisplay.textContent = "Name: " + userProfile.name + "  Age: " + age + " (" + ageInMonths + " months)  Hobbies: " + totalHobbies;
-            profileDisplay.style.color = "hotpink";
 
             console.log("Updated Profile:", userProfile);
         });
@@ -112,10 +95,6 @@
                 li.textContent = itemText;
                 document.getElementById("hobbyList").appendChild(li);
                 input.value = "";
-
-                userProfile.hobbies.push(itemText);
-                totalHobbies = userProfile.hobbies.length;
-                profileDisplay.textContent = "Name: " + userProfile.name + "  Age: " + age + " (" + ageInMonths + " months)  Hobbies: " + totalHobbies;
             }
         });
 
@@ -123,10 +102,6 @@
             const list = document.getElementById("hobbyList");
             if (list.lastElementChild) {
                 list.lastElementChild.remove();
-
-                userProfile.hobbies.pop();
-                totalHobbies = userProfile.hobbies.length;
-                profileDisplay.textContent = "Name: " + userProfile.name + "  Age: " + age + " (" + ageInMonths + " months)  Hobbies: " + totalHobbies;
             }
         });
     </script>
