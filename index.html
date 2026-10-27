@@ -116,6 +116,10 @@
                 li.textContent = itemText;
                 document.getElementById("hobbyList").appendChild(li);
                 input.value = "";
+
+                userProfile.hobbies.push(itemText);
+                totalHobbies = userProfile.hobbies.length;
+                profileDisplay.textContent = "Name: " + userProfile.name + "  Age: " + age + " (" + ageInMonths + " months)  Hobbies: " + totalHobbies;
             }
         });
 
@@ -123,6 +127,10 @@
             const list = document.getElementById("hobbyList");
             if (list.lastElementChild) {
                 list.lastElementChild.remove();
+
+                userProfile.hobbies.pop();
+                totalHobbies = userProfile.hobbies.length;
+                profileDisplay.textContent = "Name: " + userProfile.name + "  Age: " + age + " (" + ageInMonths + " months)  Hobbies: " + totalHobbies;
             }
         });
 
