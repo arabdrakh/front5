@@ -15,6 +15,18 @@
         <button type="submit">Create / Update Profile</button>
     </form>
 
+    <h2>Hobbies List</h2>
+
+    <ul id="hobbyList">
+        <li>Reading</li>
+        <li>Painting</li>
+        <li>Coding</li>
+    </ul>
+
+    <input type="text" id="itemInput" placeholder="New hobby">
+    <button id="addBtn">Add Item</button>
+    <button id="removeBtn">Remove Item</button>
+
     <script>
         const userProfile = {
             name: "Aruzhan",
@@ -47,6 +59,25 @@
             }
 
             console.log("Updated Profile:", userProfile);
+        });
+
+        document.getElementById("addBtn").addEventListener("click", function() {
+            const input = document.getElementById("itemInput");
+            const itemText = input.value.trim();
+
+            if (itemText !== "") {
+                const li = document.createElement("li");
+                li.textContent = itemText;
+                document.getElementById("hobbyList").appendChild(li);
+                input.value = "";
+            }
+        });
+
+        document.getElementById("removeBtn").addEventListener("click", function() {
+            const list = document.getElementById("hobbyList");
+            if (list.lastElementChild) {
+                list.lastElementChild.remove();
+            }
         });
     </script>
 
