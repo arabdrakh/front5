@@ -30,9 +30,9 @@ Part 3: DOM List Manipulation
 Task 5. Creating & Removing Elements
 Created an unordered list representing hobbies. Added an input field with an "Add Item" button to create and append new li items, and a "Remove Item" button to delete the last item from the list.
 
-![alt text](src/image-3.png)
+![alt text](src/image2.png)
 
-![alt text](src/image-4.png)
+![alt text](src/image1.png)
 
 Summary
 In this assignment, I practiced JavaScript fundamentals including working with objects, data types, arithmetic operations, and DOM manipulation. I implemented event listeners for form submission to update object values, and created interactive controls to dynamically add and remove DOM list elements.
