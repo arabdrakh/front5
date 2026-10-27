@@ -7,7 +7,7 @@ Task 1. The Personal Info Object
 Created a const object named userProfile storing various data types including string (name), number (birthYear), boolean (isDeveloper), and an array (hobbies).
 
 Task 2. Arithmetic Calculations
-Calculated dynamic current age using arithmetic operations (current year minus birthYear), as well as age in months and total hobbies count. Displayed values in the console.
+Calculated dynamic current age using arithmetic operations (current year minus birthYear), as well as age in months and total hobbies count. Displayed values in the console and dynamically on the page.
 
 ![alt text](src/media_1793093715575_cff22c9e.png)
 
@@ -19,18 +19,18 @@ Created an HTML form with input fields for Username and Birth Year, and a "Creat
 ![alt text](src/media_1793093724260_004f3678.png)
 
 Task 4. Event Listener
-Added a submit event listener to capture input values and update the userProfile object without page reload.
+Added a submit event listener to capture input values, update the userProfile object, and dynamically update the content and style on the page without reload.
 
 ![alt text](src/media_1793093698893_0ea8bdd0.png)
 
 Part 3: DOM List Manipulation
 
 Task 5. Creating & Removing Elements
-Created an unordered list representing hobbies. Added an input field with an "Add Item" button to create and append new li items, and a "Remove Item" button to delete the last item from the list.
+Created an unordered list representing hobbies. Added an input field with an "Add Item" button to create and append new li items, a "Remove Item" button to delete the last item from the list, and style toggling on item click.
 
 ![alt text](src/media_1793093698893_0ea8bdd0.png)
 
 ![alt text](src/media_1793093744641_d3b7ed8c.png)
 
 Summary
-In this assignment, I practiced JavaScript fundamentals including working with objects, data types, arithmetic operations, and DOM manipulation. I implemented event listeners for form submission to update object values and created interactive buttons to dynamically add and remove DOM list elements.
+In this assignment, I practiced JavaScript fundamentals including working with objects, data types, arithmetic operations, and DOM manipulation. I implemented event listeners for form submission to update object values and page content/styles, and created interactive controls to dynamically add, remove, and style DOM list elements.

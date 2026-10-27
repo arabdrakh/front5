@@ -29,12 +29,22 @@
 
         li {
             margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        #profileDisplay {
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
     <h2>User Profile</h2>
+
+    <p id="profileDisplay"></p>
 
     <form id="profileForm">
         <input type="text" id="username" placeholder="Username">
@@ -63,14 +73,17 @@
         };
 
         const currentYear = new Date().getFullYear();
-        const age = currentYear - userProfile.birthYear;
-        const ageInMonths = age * 12;
-        const totalHobbies = userProfile.hobbies.length;
+        let age = currentYear - userProfile.birthYear;
+        let ageInMonths = age * 12;
+        let totalHobbies = userProfile.hobbies.length;
 
         console.log("Name:", userProfile.name);
         console.log("Age:", age);
         console.log("Age in months:", ageInMonths);
         console.log("Total hobbies:", totalHobbies);
+
+        const profileDisplay = document.getElementById("profileDisplay");
+        profileDisplay.textContent = "Name: " + userProfile.name + " | Age: " + age + " (" + ageInMonths + " months) | Hobbies: " + totalHobbies;
 
         document.getElementById("profileForm").addEventListener("submit", function(event) {
             event.preventDefault();
@@ -84,6 +97,12 @@
             if (birthYearInput) {
                 userProfile.birthYear = Number(birthYearInput);
             }
+
+            age = currentYear - userProfile.birthYear;
+            ageInMonths = age * 12;
+
+            profileDisplay.textContent = "Name: " + userProfile.name + " | Age: " + age + " (" + ageInMonths + " months) | Hobbies: " + totalHobbies;
+            profileDisplay.style.color = "green";
 
             console.log("Updated Profile:", userProfile);
         });
@@ -104,6 +123,18 @@
             const list = document.getElementById("hobbyList");
             if (list.lastElementChild) {
                 list.lastElementChild.remove();
+            }
+        });
+
+        document.getElementById("hobbyList").addEventListener("click", function(event) {
+            if (event.target.tagName === "LI") {
+                if (event.target.style.textDecoration === "line-through") {
+                    event.target.style.textDecoration = "none";
+                    event.target.style.color = "black";
+                } else {
+                    event.target.style.textDecoration = "line-through";
+                    event.target.style.color = "gray";
+                }
             }
         });
     </script>
