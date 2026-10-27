@@ -49,15 +49,15 @@
     <form id="profileForm">
         <input type="text" id="username" placeholder="Username">
         <input type="number" id="birthYear" placeholder="Birth Year">
-        <button type="submit">Create / Update Profile</button>
+        <button type="submit">Update profile</button>
     </form>
 
-    <h2>Hobbies List</h2>
+    <h2>Hobbies</h2>
 
     <ul id="hobbyList">
         <li>Reading</li>
         <li>Painting</li>
-        <li>Coding</li>
+        <li>Gaming</li>
     </ul>
 
     <input type="text" id="itemInput" placeholder="New hobby">
@@ -67,9 +67,9 @@
     <script>
         const userProfile = {
             name: "Aruzhan",
-            birthYear: 2006,
+            birthYear: 2008,
             isDeveloper: true,
-            hobbies: ["Reading", "Painting", "Coding"]
+            hobbies: ["Reading", "Painting", "Gaming"]
         };
 
         const currentYear = new Date().getFullYear();
@@ -83,7 +83,7 @@
         console.log("Total hobbies:", totalHobbies);
 
         const profileDisplay = document.getElementById("profileDisplay");
-        profileDisplay.textContent = "Name: " + userProfile.name + " | Age: " + age + " (" + ageInMonths + " months) | Hobbies: " + totalHobbies;
+        profileDisplay.textContent = "Name: " + userProfile.name + " Age: " + age + " (" + ageInMonths + " months) Hobbies: " + totalHobbies;
 
         document.getElementById("profileForm").addEventListener("submit", function(event) {
             event.preventDefault();
